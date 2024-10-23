@@ -190,7 +190,7 @@ module Fastlane
           UI.message("Bumping minor version")
           next_minor += 1
           next_patch = 0
-        elsif should_bump_minor == true
+        elsif should_bump_patch == true
           UI.message("Bumping patch version")
           next_patch += 1
         end
