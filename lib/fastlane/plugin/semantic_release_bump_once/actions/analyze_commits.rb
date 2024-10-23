@@ -181,16 +181,16 @@ module Fastlane
         UI.message("Should bump: #{should_bump_major} #{should_bump_minor} #{should_bump_patch}")
         
         # Update to the next version
-        if should_bump_major
+        if should_bump_major == true
           UI.message("Bumping major version")
           next_major += 1
           next_minor = 0
           next_patch = 0
-        elsif should_bump_minor
+        elsif should_bump_minor == true
           UI.message("Bumping minor version")
           next_minor += 1
           next_patch = 0
-        elsif should_bump_minor
+        elsif should_bump_minor == true
           UI.message("Bumping patch version")
           next_patch += 1
         end
