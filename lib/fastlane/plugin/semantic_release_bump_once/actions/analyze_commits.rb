@@ -192,6 +192,9 @@ module Fastlane
 
         next_version = "#{next_major}.#{next_minor}.#{next_patch}"
 
+        UI.message("Last version is #{version}")
+        UI.message("Next version is #{next_version}")
+
         is_next_version_releasable = Helper::SemanticReleaseBumpOnceHelper.semver_gt(next_version, version)
 
         Actions.lane_context[SharedValues::RELEASE_ANALYZED] = true
